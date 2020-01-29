@@ -1,3 +1,4 @@
+//clear 0129
 #include <stdio.h>
 int main(){
     int i,j,max=0;
@@ -12,19 +13,13 @@ int main(){
     }
 
 for(j=0;j<10;j++){
-    for( i = 0 ; i < 9 ; i++ ){
+    for( i = j ; i < 9 ; i++ ){
         if(num[j] == num[i+1]){
-            cnt[i]++;
+            cnt[j]++;
         }
         
     }
 }
-
-for( i =0 ; i< 10 ; i++ ){
-    printf("num = %d , cnt = %d",num[i],cnt[i]);
-    printf("\n");
-}
-
 
 for( i = 0 ; i<10 ; i++){
     if(max < cnt[i]){
@@ -37,13 +32,11 @@ if(cnt[i] == max ){
     fin = num[i];
 }
 }
-printf("max = %d\n",max);
 
 printf("%d\n",represent/10);
 
 printf("%d\n",fin);
 
-    
 
     
     return 0;
